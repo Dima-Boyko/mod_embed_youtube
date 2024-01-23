@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Embed YouTube</name>
+    <author>Boyko Dmitry</author>
+    <creationDate>10.06.2018</creationDate>
+    <authorEmail>mail@itdix.net</authorEmail>
+    <authorUrl>http://itdix.net</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_EMBED_YOUTUBE_DESCRIPTION</description>
+    <files>
+        <filename module="mod_embed_youtube">mod_embed_youtube.php</filename>
+		<filename>index.html</filename>
+        <filename>mod_embed_youtube.xml</filename>
+        <folder>tmpl</folder>		
+    </files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.mod_embed_youtube.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_embed_youtube.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_embed_youtube.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_embed_youtube.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" >
+			<fieldset name="basic">
+				<field name="YouTubeLink" type="text"  filter="raw"  default="" label="MOD_EMBED_YOUTUBE_LINK" description="MOD_EMBED_YOUTUBE_LINK_HELP"/>
+				<field name="SimilarVideo" type="radio" default="1" label="MOD_EMBED_YOUTUBE_SIMILAR_VIDEO" description="MOD_EMBED_YOUTUBE_SIMILAR_VIDEO_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="ControlPanel" type="radio" default="1" label="MOD_EMBED_YOUTUBE_CONTROL_PANEL" description="MOD_EMBED_YOUTUBE_CONTROL_PANEL_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="TitleVideo" type="radio" default="1" label="MOD_EMBED_YOUTUBE_TITLE_VIDEO" description="MOD_EMBED_YOUTUBE_TITLE_VIDEO_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="PrivacyMode" type="radio" default="0" label="MOD_EMBED_YOUTUBE_PRIVACY_MODE" description="MOD_EMBED_YOUTUBE_PRIVACY_MODE_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="StartTime" type="text"    default="0:00" label="MOD_EMBED_YOUTUBE_START_TIME" description="MOD_EMBED_YOUTUBE_START_TIME_HELP"/>
+				<field name="AutoSize" type="radio" default="0" label="MOD_EMBED_YOUTUBE_AUTO_SIZE" description="MOD_EMBED_YOUTUBE_AUTO_SIZE_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="VudeoWidth" type="text"    default="560" label="MOD_EMBED_YOUTUBE_WIDTH" description="MOD_EMBED_YOUTUBE_WIDTH_HELP"/>
+				<field name="VideoHeight" type="text"    default="315" label="MOD_EMBED_YOUTUBE_HEIGHT" description="MOD_EMBED_YOUTUBE_HEIGHT_HELP"/>
+			</fieldset>
+		</fields>
+		
+	</config>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Steel Code">http://itdix.net/update/mod_embed_youtube/update.xml</server>
+	</updateservers>
+	
+</extension>
